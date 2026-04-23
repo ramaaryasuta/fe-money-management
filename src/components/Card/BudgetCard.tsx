@@ -37,7 +37,7 @@ export default function BudgetCard({
     const percentage = Math.min(Math.round((spent / budget) * 100), 100);
 
     return (
-        <div className="bg-white rounded-2xl border border-gray-100 p-5 w-full">
+        <div className="bg-white rounded-lg border border-gray-200 p-4 w-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
@@ -47,19 +47,19 @@ export default function BudgetCard({
                     <span className="text-sm font-semibold text-gray-800">{name}</span>
                 </div>
                 {badge && (
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${badgeStyles[badgeColor]} overflow-hidden text-ellipsis`}>
+                    <span className={`text-xs font-normal px-2.5 py-1 rounded-full ${badgeStyles[badgeColor]} overflow-hidden text-ellipsis`}>
                         {badge}
                     </span>
                 )}
             </div>
 
             {/* Spent amount */}
-            <p className="text-2xl font-bold text-gray-900 mb-4">
+            <p className="text-lg font-semibold text-gray-900 mb-4">
                 {formatRupiah(spent)}
             </p>
 
             {/* Progress bar */}
-            <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
+            <div className="flex items-center justify-between text-xs text-gray-400 font-light mb-1.5">
                 <span>Budget {formatRupiah(budget)}</span>
                 <span>{percentage}% digunakan</span>
             </div>
@@ -77,7 +77,7 @@ export default function BudgetCard({
                     {tags.map((tag) => (
                         <span
                             key={tag}
-                            className="text-[11px] text-gray-500 bg-gray-100 rounded-md px-2 py-0.5"
+                            className="text-[10px] text-gray-500 bg-gray-100 rounded-md px-2 py-0.5"
                         >
                             {tag}
                         </span>

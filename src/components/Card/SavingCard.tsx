@@ -21,7 +21,7 @@ const SavingCard = ({
     const percentage = Math.min(Math.round((balance / target) * 100), 100);
 
     return (
-        <div className="bg-white rounded-2xl border border-gray-100 p-5 w-full">
+        <div className="bg-white rounded-lg border border-gray-200 p-4 w-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
@@ -31,19 +31,19 @@ const SavingCard = ({
                     <span className="text-sm font-semibold text-gray-800">{name}</span>
                 </div>
                 {badge && (
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${badgeStyles[badgeColor]} overflow-hidden text-ellipsis`}>
+                    <span className={`text-xs font-normal px-2.5 py-1 rounded-full ${badgeStyles[badgeColor]} overflow-hidden text-ellipsis`}>
                         {badge}
                     </span>
                 )}
             </div>
 
             {/* balance amount */}
-            <p className="text-2xl font-bold text-gray-900 mb-4">
+            <p className="text-lg font-semibold text-gray-900 mb-4">
                 {formatRupiah(balance)}
             </p>
 
             {/* Progress bar */}
-            <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
+            <div className="flex items-center justify-between text-xs text-gray-400 font-light mb-1.5">
                 <span>Budget {formatRupiah(target)}</span>
                 <span>{percentage}% tercapai</span>
             </div>
