@@ -1,7 +1,6 @@
 const DashboardPage = () => {
     return (
-        <div>
-            <h1>Ini Dashboard</h1>
+        <div className="px-4">
         </div>
     )
 }

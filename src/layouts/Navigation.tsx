@@ -207,7 +207,7 @@ export function Navigation({
                 user={user}
             />
             <TopBar navItems={navItems} activeId={activeId} />
-            <main className="md:ml-52 md:mt-14 pb-20 md:pb-0">
+            <main className="md:ml-52 mt-14 pb-20 md:pb-0">
                 {children}
             </main>
             <BottomNav navItems={navItems} activeId={activeId} onNavigate={onNavigate} />
