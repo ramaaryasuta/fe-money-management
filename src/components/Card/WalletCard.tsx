@@ -52,7 +52,7 @@ export default function WalletCard({
                     <span className="text-sm font-semibold text-gray-800">{name}</span>
                 </div>
                 {badge && (
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${badgeStyles[badgeColor]}`}>
+                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full overflow-hidden text-ellipsis ${badgeStyles[badgeColor]}`}>
                         {badge}
                     </span>
                 )}
