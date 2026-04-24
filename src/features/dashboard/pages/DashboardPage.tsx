@@ -1,4 +1,5 @@
 import SmartInputField from "../../../components/Field/SmartInputField"
+import WalletAndHistory from "../components/WalletAndHistory"
 import WalletSummary from "../components/WalletSummary"
 
 const DashboardPage = () => {
@@ -8,6 +9,7 @@ const DashboardPage = () => {
             <SmartInputField
                 onSubmit={(value) => console.log("Input:", value)}
                 placeholder="Beli kopi 20k, bayar listik 500rb..." />
+            <WalletAndHistory />
         </div>
     )
 }

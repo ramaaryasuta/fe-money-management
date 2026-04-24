@@ -13,6 +13,7 @@ export interface BudgetCardProps {
     badge?: string;
     icon?: React.ReactNode;
     badgeColor?: "blue" | "orange" | "green" | "gray";
+    showTags?: boolean;
     tags?: string[];
 }
 
@@ -25,6 +26,7 @@ export default function BudgetCard({
     badge,
     icon,
     badgeColor = "orange",
+    showTags = true,
     tags = [],
 }: BudgetCardProps) {
     const percentage = Math.min(Math.round((spent / budget) * 100), 100);
@@ -65,7 +67,7 @@ export default function BudgetCard({
             </div>
 
             {/* Tags */}
-            {tags.length > 0 && (
+            {tags.length > 0 && showTags && (
                 <div className="flex flex-wrap gap-1.5">
                     {tags.map((tag) => (
                         <span
