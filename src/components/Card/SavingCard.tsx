@@ -1,5 +1,6 @@
 import { formatRupiah } from "../../utils/formatting";
 import { badgeStyles } from "../../utils/ui_helper";
+import { PiggyBank } from "lucide-react";
 
 export interface SavingCardProps {
     name: string;
@@ -25,8 +26,8 @@ const SavingCard = ({
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
-                        {icon}
+                    <div className="w-9 h-9 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                        {icon ?? <PiggyBank size={16} color={`${badgeColor}`} />}
                     </div>
                     <span className="text-sm font-semibold text-gray-800">{name}</span>
                 </div>

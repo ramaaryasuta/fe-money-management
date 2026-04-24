@@ -3,6 +3,8 @@ import React from "react";
 import { formatRupiah } from "../../utils/formatting";
 import { badgeStyles } from "../../utils/ui_helper";
 
+import { Star } from "lucide-react"
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface WalletCardProps {
@@ -13,14 +15,6 @@ export interface WalletCardProps {
     icon?: React.ReactNode;
     badgeColor?: "blue" | "orange" | "green" | "gray";
 }
-
-// ─── Default Icon ─────────────────────────────────────────────────────────────
-
-const StarIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-400">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    </svg>
-);
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -37,8 +31,8 @@ export default function WalletCard({
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl bg-pink-50 flex items-center justify-center flex-shrink-0">
-                        {icon ?? <StarIcon />}
+                    <div className={`w-8 h-8 rounded-xl bg-orange-50  flex items-center justify-center flex-shrink-0`}>
+                        {icon ?? <Star size={16} color={`${badgeColor}`} />}
                     </div>
                     <span className="text-sm font-semibold text-gray-800">{name}</span>
                 </div>
